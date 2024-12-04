@@ -1,5 +1,5 @@
 #Import List
-from fastapi import FastAPI,HTTPException
+from fastapi import FastAPI,HTTPException,Response
 from pydantic import BaseModel
 from typing import Optional
 
@@ -21,16 +21,13 @@ class Item(BaseModel):
     quantity: int
     colour: Optional[str] = None
 
-'''
-#response??
-@app.get("/itemssss/{item_id}")
-def get_item(id: int,response:Response):
-    if Response == 404:
-        return {"msg":"Error"}
-        #raise HTTPException(status_code=404, detail="Item error")
-    return {"Item id": id}
 
-'''
+@app.get("/item_response/{id}")
+def get_item(id: int,response:Response):
+    if id not in items:
+        response.status_code = 404
+        return response
+
 @app.get("/items/{id}")
 def get_item(id: int):
     if id not in items:
