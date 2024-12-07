@@ -50,6 +50,7 @@ def create_item(item: Item):
     }
 
 #ACTIVITAT_9
+#Metode Put
 @app.put("/items/{item_id}")
 async def update_item(item_id: int, item: Annotated[Item, Body(embed=True)]):
     results = {"item_id": item_id, "item": item}
