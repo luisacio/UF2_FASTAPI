@@ -1,6 +1,7 @@
-from fastapi import FastAPI,HTTPException,Response
-from pydantic import BaseModel
-from typing import Optional, List
+#Import list
+from fastapi import FastAPI,HTTPException,Response,Body
+from pydantic import BaseModel,Field
+from typing import Optional, List,Annotated
 
 app = FastAPI()
 
@@ -47,3 +48,9 @@ def create_item(item: Item):
         "quantity": item.quantity,
         "colour": item.colour
     }
+
+#ACTIVITAT_9
+@app.put("/items/{item_id}")
+async def update_item(item_id: int, item: Annotated[Item, Body(embed=True)]):
+    results = {"item_id": item_id, "item": item}
+    return results
