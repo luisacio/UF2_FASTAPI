@@ -28,5 +28,23 @@
 ### Crear funcio amb llista de clases com parametre
 ![Captura func](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_9/ACTIVITAT_9/IMATGES/body_nested_models/func_list_param.png)
 
+## USER_READ
+### Estructura arxius
+![Estructura arxius](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_9/ACTIVITAT_9/IMATGES/read_users/documentacio_9_6.png)
+
+### Arxiu connexio
+![Arxiu connexio](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_9/ACTIVITAT_9/IMATGES/read_users/documentacio_9_3.png)
+
+### Funcio read_all_users
+![Funcio read_all_users](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_9/ACTIVITAT_9/IMATGES/read_users/documentacio_9_7.png)
+
+### Schema per usuari
+![Schema per usuari](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_9/ACTIVITAT_9/IMATGES/read_users/documentacio_9_4.png)
+
+### Arxiu main
+![Arxiu main](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_9/ACTIVITAT_9/IMATGES/read_users/documentacio_9_5.png)
+
+### Postman codi:200
+![Postman codi:200](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_9/ACTIVITAT_9/IMATGES/read_users/documentacio_9_1.png)
 
 
