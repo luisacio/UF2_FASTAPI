@@ -1,7 +1,7 @@
 # ACTIVITAT_9
 ## Proves body-field
 ### Importar Field
-![Captura importar Field](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_9/ACTIVITAT_9/IMATGES/body_field/import_field.png)
+![Captura importar Field](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_9/ACTIVITAT_9/IMATGES/body_field/import_Field.png)
 
 ### Editar atribut de preu
 ![Captura codi main i atribut preu](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_9/ACTIVITAT_9/IMATGES/body_field/body_field.png)
