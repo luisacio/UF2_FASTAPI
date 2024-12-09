@@ -1,31 +1,33 @@
-# ACTIVITAT_8
+# ACTIVITAT_10
 ## Proves Swagger
 
-### Metode:Get / Codi:200
+### Metode:get_all_theme / Codi:200
 
-![Captura Metode:Get amb codi de sortida 200](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_8/ACTIVITAT_8/IMATGES/get_200.png)
+![Captura Metode:get_all_theme amb codi de sortida 200](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_10/ACTIVITAT_10/IMAGES/get_theme_200.png)
 
-### Metode:Get / Codi:404
+### Metode:get_word / Codi:404
 
-![Captura Metode:Get amb codi de sortida 404](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_8/ACTIVITAT_8/IMATGES/get_404.png)
+![Captura Metode:get_word amb codi de sortida 200](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_10/ACTIVITAT_10/IMAGES/get_word_200.png)
 
+## Insertar csv a bbdd
+### Import pandas
 
-### Metode:Post / Codi:200
+![Import](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_10/ACTIVITAT_10/IMAGES/import_pandas.png)
 
-![Captura Metode:Post amb codi de sortida 200](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_8/ACTIVITAT_8/IMATGES/post_200.png)
+### Llegir i convertir csv a df
 
-
-## Proves Postman
-### Metode:Get / Codi:200
-
-![Captura Metode:Get amb codi de sortida 200](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_8/ACTIVITAT_8/IMATGES/get_200_postman.png)
+![csv a df](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_10/ACTIVITAT_10/IMAGES/read_csv.png)
 
 
-### Metode:Get / Codi:404
+### Llegir e insertar a bbdd
 
-![Captura Metode:Get amb codi de sortida 404](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_8/ACTIVITAT_8/IMATGES/get_404_postman.png)
+![bbdd](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_10/ACTIVITAT_10/IMAGES/insert_bbdd.png)
 
 
-### Metode:Post / Codi:200
+### Commit
 
-![Captura Metode:Post amb codi de sortida 200](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_8/ACTIVITAT_8/IMATGES/post_200_postman.png)
+![Commit](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_10/ACTIVITAT_10/IMAGES/commit.png)
+
+### Tancar cursor i connexio
+
+![tancar](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_10/ACTIVITAT_10/IMAGES/close.png)
