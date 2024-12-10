@@ -5,11 +5,10 @@ def read_all_theme():
 
     cur_conn[0].execute("""SELECT DISTINCT theme FROM public.game_words ORDER BY theme ASC  """)
     themes = cur_conn[0].fetchall()
-    themes_dicc = [{"option": item[0]} for item in themes]
     cur_conn[0].close()
     cur_conn[1].close()
 
-    return themes_dicc
+    return themes
 
 def read_word(theme):
     cur_conn = bbdd_management.connect_to_bbdd()
@@ -18,8 +17,7 @@ def read_word(theme):
                             WHERE theme = %s
                              ORDER BY RANDOM() LIMIT 1  """,(theme,))
     word_fetch =  cur_conn[0].fetchone()
-    word = [{"option" : word_fetch[0]}]
     cur_conn[0].close()
     cur_conn[1].close()
 
-    return word
+    return word_fetch
