@@ -1,6 +1,6 @@
-from pydantic import BaseModel, Field
-from typing import Optional
+def user_schema(user):
+    return {"id":user[0],
+            "name":user[1]}
 
-class User(BaseModel):
-    id: int = Field()
-    name: Optional[str] = None
+def users_schema(list_users):
+    return [user_schema(user) for user in list_users]

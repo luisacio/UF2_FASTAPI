@@ -35,8 +35,8 @@
 ### Arxiu connexio
 ![Arxiu connexio](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_9/ACTIVITAT_9/IMATGES/read_users/documentacio_9_3.png)
 
-### Funcio read_all_users
-![Funcio read_all_users](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_9/ACTIVITAT_9/IMATGES/read_users/documentacio_9_7.png)
+### Funcio read_users
+![Funcio read_users](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_9/ACTIVITAT_9/IMATGES/read_users/documentacio_9_7.png)
 
 ### Schema per usuari
 ![Schema per usuari](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_9/ACTIVITAT_9/IMATGES/read_users/documentacio_9_4.png)
