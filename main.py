@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from typing import List
 
+
 from ACTIVITAT_12.BASE_MODEL.base_model import User,UserScore,GameWord,CodeRender
 from ACTIVITAT_12.CRUD import crud_actions
 from ACTIVITAT_12.SCHEMES.schemes import *
@@ -107,4 +108,4 @@ async def put_user_score(user_score:UserScore):
 async def delete_user_score(user_score:UserScore):
     crud_actions.delete_user_score(user_score)
     return {"msg": "Game deleted"}
-
+  
