@@ -29,3 +29,11 @@
 
 ![Captura Obtenir dades partida amb codi de sortida 200](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_11/ACTIVITAT_11/IMAGES/ep_dades_partida.png)
 ![Captura Obtenir dades partida amb codi de sortida 200](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_11/ACTIVITAT_11/IMAGES/img_paraula.png)
+
+### Commit
+
+![Commit](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_10/ACTIVITAT_10/IMAGES/commit.png)
+
+### Tancar cursor i connexio
+
+![tancar](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_10/ACTIVITAT_10/IMAGES/close.png)
