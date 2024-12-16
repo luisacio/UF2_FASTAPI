@@ -1,28 +1,34 @@
-# ACTIVITAT_10
+# ACTIVITAT_11
 ## Proves Swagger
 
-### Metode:get_all_theme / Codi:200
+### Metode:Obtenir tematica / Codi:200
 
-![Captura Metode:get_all_theme amb codi de sortida 200](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_10/ACTIVITAT_10/IMAGES/get_theme_200.png)
+![Captura Obtenir tematica amb codi de sortida 200](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_11/ACTIVITAT_11/IMAGES/ep_tematica.png)
+![Captura Obtenir tematica amb codi de sortida 200](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_11/ACTIVITAT_11/IMAGES/img_tematica.png)
+### Metode:Obtenir paraula / Codi:200
 
-### Metode:get_word / Codi:404
+![Captura Obtenir paraula amb codi de sortida 200](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_11/ACTIVITAT_11/IMAGES/ep_paraula.png)
+![Captura Obtenir paraula amb codi de sortida 200](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_11/ACTIVITAT_11/IMAGES/img_paraula.png)
+### Metode:Render començar partida / Codi:200
 
-![Captura Metode:get_word amb codi de sortida 200](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_10/ACTIVITAT_10/IMAGES/get_word_200.png)
+![Captura Render amb codi de sortida 200](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_11/ACTIVITAT_11/IMAGES/ep_com_partida.png)
+![Captura Render amb codi de sortida 200](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_11/ACTIVITAT_11/IMAGES/img_com_partida.png)
+### Metode:INSERT partida / Codi:200
 
-## Insertar csv a bbdd
-### Import pandas
+![Captura INSERT partida amb codi de sortida 200](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_11/ACTIVITAT_11/IMAGES/ep_crear_partida.png)
+![Captura INSERT partida amb codi de sortida 200](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_11/ACTIVITAT_11/IMAGES/img_crear_partida.png)
+### Metode:UPDATE partida / Codi:200
 
-![Import](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_10/ACTIVITAT_10/IMAGES/import_pandas.png)
+![Captura UPDATE partida amb codi de sortida 200](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_11/ACTIVITAT_11/IMAGES/ep_guardar_partida.png)
+![Captura UPDATE partida amb codi de sortida 200](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_11/ACTIVITAT_11/IMAGES/img_guardar_partida.png)
+### Metode:Render ABC / Codi:200
 
-### Llegir i convertir csv a df
+![Captura Render ABC amb codi de sortida 200](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_11/ACTIVITAT_11/IMAGES/ep_abc.png)
+![Captura Render ABC amb codi de sortida 200](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_11/ACTIVITAT_11/IMAGES/img_abc.png)
+### Metode:Obtenir dades partida / Codi:200
 
-![csv a df](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_10/ACTIVITAT_10/IMAGES/read_csv.png)
-
-
-### Llegir e insertar a bbdd
-
-![bbdd](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_10/ACTIVITAT_10/IMAGES/insert_bbdd.png)
-
+![Captura Obtenir dades partida amb codi de sortida 200](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_11/ACTIVITAT_11/IMAGES/ep_dades_partida.png)
+![Captura Obtenir dades partida amb codi de sortida 200](https://github.com/luisacio/UF2_FASTAPI/blob/activitat_11/ACTIVITAT_11/IMAGES/img_paraula.png)
 
 ### Commit
 
