@@ -1,49 +1,110 @@
-from fastapi import FastAPI,HTTPException,Response
-from pydantic import BaseModel
-from typing import Optional, List
+from fastapi import FastAPI
+from typing import List
+
+from ACTIVITAT_12.BASE_MODEL.base_model import User,UserScore,GameWord,CodeRender
+from ACTIVITAT_12.CRUD import crud_actions
+from ACTIVITAT_12.SCHEMES.schemes import *
 
 app = FastAPI()
 
-items = {
-    1: {"id": 1, "item_name": "pc", "price": 600, "store": "Madrid", "quantity": 10, "colour": "White"},
-    2: {"id": 2, "item_name": "car", "price": 20000, "store": "BCN", "quantity": 2, "colour": "Red"},
-    3: {"id": 3, "item_name": "speaker", "price": 30, "store": "Cordoba", "quantity": 18, "colour": "Brown"},
-    4: {"id": 4, "item_name": "mouse", "price": 15, "store": "Malaga", "quantity": 59, "colour": "Black"},
-    5: {"id": 5, "item_name": "pen", "price": 2, "store": "Bilbao", "quantity": 345, "colour": "Blue"},
-}
+#------------------------TAULA GAME_WORDS-------------------------#
+#Endpoint per mostrar tematica
+@app.get("/penjat/theme/options", response_model=List[dict])
+async def get_theme():
+    return list_format_schema(crud_actions.select_theme())
 
-class Item(BaseModel):
-    id: int
-    item_name: str
-    price: float
-    store: str
-    quantity: int
-    colour: Optional[str] = None
+#Endpoint per rebre la paraula aleatoria
+@app.get("/penjat/theme/{option}", response_model=List[dict])
+async def get_word(option):
+    return list_format_schema(crud_actions.select_word(option))
 
+#Endpoint per INSERTAR la paraula aleatoria i el seu tema
+@app.post("/penjat/insert_word")
+async def post_word(game_word:GameWord):
+    crud_actions.insert_word(game_word)
+    return {"msg": "Word saved"}
 
-@app.get("/item_response/{id}")
-def get_item(id: int,response:Response):
-    if id not in items:
-        response.status_code = 404
-        return response
+#Endpoint per ACTUALITZAR la paraula aleatoria i el seu tema
+@app.put("/penjat/update_word")
+async def put_word(game_word:GameWord):
+    crud_actions.update_word(game_word)
+    return {"msg": "Word updated"}
 
-@app.get("/items/{id}")
-def get_item(id: int):
-    if id not in items:
-        raise HTTPException(status_code=404, detail="Item error")
-    return {"Item id": id}
+#Endpoint per ESBORRAR la paraula aleatoria i el seu tema
+@app.delete("/penjat/delete_word")
+async def delete_word(game_word:GameWord):
+    crud_actions.delete_word(game_word)
+    return {"msg": "Word deleted"}
 
-@app.post("/items/")
-def create_item(item: Item):
-    #Crear item en arxiu o bbdd
-    #Crear validacio si existeix previament l item.
-    #items = {item.id:{"item_name":item.item_name,"price":item.price,"store":item.store,"quantity":item.quantity,"colour":item.colour}}
+#------------------------TAULA INFO_RENDER-------------------------#
+#Endpoint per cualsevol missatge simple del joc, inclos l´abecedari
+@app.get("/penjat/{code}", response_model=List[dict])
+async def get_render(code):
+    return list_format_schema(crud_actions.select_render(code))
 
-    return {
-        "id": item.id,
-        "item_name": item.item_name,
-        "price": item.price,
-        "store": item.store,
-        "quantity": item.quantity,
-        "colour": item.colour
-    }
+#Endpoint per INSERTAR un render
+@app.post("/penjat/insert_render")
+async def post_render(render:CodeRender):
+    crud_actions.insert_render(render)
+    return {"msg": "Render inserted"}
+
+#Endpoint per ACTUALITZAR un render
+@app.put("/penjat/update_render")
+async def put_render(render:CodeRender):
+    crud_actions.update_render(render)
+    return {"msg": "Render updated"}
+
+#Endpoint per ESBORRAR un render
+@app.delete("/penjat/delete_render")
+async def delete_render(render:CodeRender):
+    crud_actions.delete_render(render)
+    return {"msg": "Render deleted"}
+
+#------------------------TAULA USUARIO-------------------------#
+#Endpoint per rebre les dades del usuari
+@app.get("/penjat/user/{user}",response_model=List[dict])
+async def get_user(user):
+    return list_format_user_schema(crud_actions.select_user(user))
+
+#Endpoint per INSERTAR usuari
+@app.post("/penjat/insert_user")
+async def post_user(user:User):
+    crud_actions.insert_user(user)
+    return {"msg": "New user done"}
+
+#Endpoint per ACTUALITZAR un usuari
+@app.put("/penjat/update_user")
+async def put_user(user:User):
+    crud_actions.update_user(user)
+    return {"msg": "User updated"}
+
+#Endpoint per ESBORRAR un usuari
+@app.delete("/penjat/delete_user")
+async def delete_user(user:User):
+    crud_actions.delete_user(user)
+    return {"msg": "User deleted"}
+
+#------------------------TAULA USUARIO_PUNTUACION-------------------------#
+#Endpoint per rebre les dades de la partida actual
+@app.get("/penjat/id_partida/{id_game}",response_model=List[dict])
+async def get_user_score(id_game):
+    return list_format_game_schema(crud_actions.select_user_score(id_game))
+
+#Endpoint per INSERTAR partida
+@app.post("/penjat/insert_game")
+async def post_user_score(user_score:UserScore):
+    crud_actions.insert_user_score(user_score)
+    return {"msg": "Game inserted"}
+
+#Endpoint per ACTUALITZAR dades de la partida
+@app.put("/penjat/save_game")
+async def put_user_score(user_score:UserScore):
+    crud_actions.update_user_score(user_score)
+    return {"msg": "Game saved"}
+
+#Endpoint per ESBORRAR dades de la partida
+@app.delete("/penjat/delete_game")
+async def delete_user_score(user_score:UserScore):
+    crud_actions.delete_user_score(user_score)
+    return {"msg": "Game deleted"}
+
